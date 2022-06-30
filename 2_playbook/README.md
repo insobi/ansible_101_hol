@@ -1,4 +1,4 @@
-# Hands-on - Playbook
+# Playbook
 
 #### Case 1 - play hosts
 ```

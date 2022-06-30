@@ -1,4 +1,4 @@
-# Hands-on - Condition
+# Condition
 
 #### Case 1 - when
 ```

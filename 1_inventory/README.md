@@ -1,4 +1,4 @@
-# Hands-on - Inventory
+# Inventory
 
 #### Case 1
 ```

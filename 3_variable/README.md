@@ -1,4 +1,4 @@
-# Hands-on - Variable
+# Variable
 
 #### Case 1 - vars
 ```
