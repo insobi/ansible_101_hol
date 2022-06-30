@@ -1,7 +1,5 @@
-# ansible-playbook pb_vars_prompt.yml
 - name: example - vars_prompt
   hosts: localhost
-  gather_facts: no
 
   vars_prompt:
     - name: username

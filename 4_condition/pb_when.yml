@@ -1,5 +1,3 @@
-# ansible-playbook pb_when.yml
----
 - name: example - when
   hosts: localhost
   gather_facts: yes
