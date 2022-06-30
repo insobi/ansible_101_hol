@@ -42,3 +42,11 @@ ansible-playbook -i hosts.ini pb_set_fact.yml
 ```
 ansible-playbook -i hosts.ini pb_register.yml
 ```
+
+#### Case 6 - vars_prompt
+
+- vars_prompt 키워드를 이용하여, CLI 실행 시 변수값 입력받기
+
+```
+ansible-playbook -i hosts.ini pb_vars_prompt.yml
+```
