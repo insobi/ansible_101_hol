@@ -1,6 +1,6 @@
 - name: example - extra_vars
   hosts: "{{ host }}"
-  gather_facts: no
+
   tasks:
     - name: check hostname
       command: hostname
