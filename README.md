@@ -1,1 +1,1 @@
-# ansible_101_hol
+# Ansible 101 Hands-on lab
