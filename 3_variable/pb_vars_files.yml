@@ -1,0 +1,13 @@
+- name: example - vars_files 
+  hosts: web
+  gather_facts: no
+  become: true
+  become_user: root
+
+  vars_files:
+    - ./vars_dns.yml
+
+  tasks:
+    - lineinfile:
+        path: /etc/resolv.conf
+        line: nameserver "{{ dns_server1 }}"
