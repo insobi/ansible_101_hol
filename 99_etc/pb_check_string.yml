@@ -9,10 +9,10 @@
   
   - name: checking 1
     debug:
-      msg: the value exists in stdout."
+      msg: "the value exists in stdout."
     when: res.stdout is search('version 04.21')
 
   - name: checking 2
     debug:
-      msg: the value exists in stdout."
+      msg: "the value exists in stdout."
     when: res.stdout | regex_search('version 04.21')
