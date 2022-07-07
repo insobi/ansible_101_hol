@@ -6,13 +6,21 @@
     cisco.nxos.nxos_command:
       commands: show version
     register: res
-  
-  - name: checking 1
-    debug:
-      msg: "the value exists in stdout."
-    when: res.stdout is search('version 04.21')
 
-  - name: checking 2
-    debug:
-      msg: "the value exists in stdout."
-    when: res.stdout | regex_search('version 04.21')
+  - debug:
+      var: res.stdout
+
+  # Regular expression ==> 'BIOS: version '
+  - set_fact:
+      chk_regex: "{{ res.stdout | regex_search('BIOS[:]\\sversion\\s([0-9]+)[.]([0-9]+)') }}"
+      chk_exist: "{{ res.stdout is search('BIOS: version') != -1 }}"
+      extract_value: "{{ res.stdout | regex_search('BIOS[:]\\sversion\\s([0-9]+)[.]([0-9]+)') | regex_replace('BIOS: version ') }}"
+  
+  - debug:
+      msg: "{{ chk_regex }}"
+
+  - debug:
+      msg: "{{ chk_exist }}"
+
+  - debug:
+      msg: "{{ extract_value }}"
