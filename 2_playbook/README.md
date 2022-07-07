@@ -56,4 +56,6 @@ ansible-playbook -i hosts.ini pb_tags.yml --tags bar
 ansible-playbook -i hosts.ini pb_tags.yml --tags never
 ansible-playbook -i hosts.ini pb_tags.yml --tags omg
 ansible-playbook -i hosts.ini pb_tags.yml --start-at-task "foo,bar"
+
+ansible-playbook -i hosts.ini pb_tags2.yml --tags foo
 ```
