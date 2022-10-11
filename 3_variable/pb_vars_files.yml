@@ -10,3 +10,6 @@
     - lineinfile:
         path: /etc/resolv.conf
         line: nameserver "{{ dns_server1 }}"
+    
+    - debug:
+        msg: "{{ lookup('ansible.builtin.file', '/etc/resolv.conf').splitlines() }}"
