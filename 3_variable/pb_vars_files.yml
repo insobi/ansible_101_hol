@@ -7,9 +7,13 @@
     - ./vars_dns.yml
 
   tasks:
+    - command: touch /tmp/resolv.conf
+  
     - lineinfile:
-        path: /etc/resolv.conf
+        path: /tmp/resolv.conf
         line: nameserver "{{ dns_server1 }}"
+
+    - command: cat /tmp/resolv.conf
+      register: result
     
-    - debug:
-        msg: "{{ lookup('ansible.builtin.file', '/etc/resolv.conf').splitlines() }}"
+    - debug: var=result.stdout_lines
