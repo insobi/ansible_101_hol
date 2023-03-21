@@ -25,5 +25,5 @@ ansible -i hosts.ini "*2" -a hostname
 
 ```
 ansible -i hosts.ini all -a id
-ansible -i hosts.ini all -a id -b -u root
+ansible -i hosts.ini all -a id -b -u root --ask-become-pass
 ```
